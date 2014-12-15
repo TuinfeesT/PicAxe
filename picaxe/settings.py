@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'photologue',
     'sortedm2m',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
