@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin.options import InlineModelAdmin
+from django.contrib.sites.models import Site
 from photologue.admin import GalleryAdmin as GalleryAdminDefault
 from photologue.admin import PhotoAdmin as PhotoAdminDefault
 from photologue.models import Gallery, Photo
@@ -40,3 +41,6 @@ class PhotoAdmin(PhotoAdminDefault):
 
 admin.site.unregister(Photo)
 admin.site.register(Photo, PhotoAdmin)
+
+# Remove Site support from admin
+admin.site.unregister(Site)

@@ -6,5 +6,3 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('photologue.urls', namespace='photologue')),
 )
-
-admin.site.unregister(Site)
