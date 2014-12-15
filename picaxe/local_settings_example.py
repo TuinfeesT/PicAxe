@@ -21,3 +21,7 @@ DATABASES = {
 MEDIA_ROOT = 'media'
 
 MEDIA_URL = '/media/'
+
+# Change this in your production environement!
+
+SECRET_KEY = 'ysl5fng3l3bwakh$g-nf-0y$5p+1sy64v^y7#0qb92xay&ki)+'
