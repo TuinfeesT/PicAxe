@@ -8,6 +8,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
+import logging
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -107,5 +111,5 @@ SITE_ID = 1
 try:
     from .local_settings import *
 except ImportError:
-    print('A local_settings.py file was not found, please create one using local_settings_example.py as an example!')
-    pass
+    if not DEBUG:
+        logger.warning('A local_settings.py file was not found, please create one using local_settings_example.py as an example!')
