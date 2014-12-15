@@ -3,10 +3,6 @@ from django.contrib import admin
 from django.contrib.sites.models import Site
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'picaxe.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('photologue.urls', namespace='photologue')),
 )
