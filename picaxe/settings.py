@@ -28,7 +28,7 @@ ALLOWED_HOSTS = []
 
 # Media paths
 
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
@@ -76,7 +76,7 @@ DATABASES = {
 
 # Templating
 TEMPLATE_DIRS = (
-    'templates',
+    os.path.join(BASE_DIR, 'templates'),
 )
 
 # Internationalization
