@@ -45,6 +45,8 @@ INSTALLED_APPS = (
     'photologue',
     'sortedm2m',
     'bootstrap3',
+    'taggit',
+    'gallery',
 )
 
 MIDDLEWARE_CLASSES = (
