@@ -4,6 +4,7 @@ from django.contrib.sites.models import Site
 from photologue.admin import GalleryAdmin as GalleryAdminDefault
 from photologue.admin import PhotoAdmin as PhotoAdminDefault
 from photologue.models import Gallery, Photo
+from taggit.models import Tag
 from .models import GalleryExtended, PhotoExtended
 
 
@@ -44,3 +45,6 @@ admin.site.register(Photo, PhotoAdmin)
 
 # Remove Site support from admin
 admin.site.unregister(Site)
+
+# Remove direct Tags support from admin
+admin.site.unregister(Tag)
