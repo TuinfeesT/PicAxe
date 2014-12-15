@@ -55,3 +55,6 @@ target/
 
 # PyCharm/IDEA stuff
 .idea
+
+# Sqlite files
+*.sqlite3
