@@ -4,6 +4,9 @@ __author__ = 'peter'
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# Turn debugging off for production environments!
+DEBUG = False
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
