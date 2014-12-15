@@ -58,3 +58,6 @@ target/
 
 # Sqlite files
 *.sqlite3
+
+# Media folder
+/media
