@@ -26,6 +26,11 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Media paths
+
+MEDIA_ROOT = 'media'
+
+MEDIA_URL = '/media/'
 
 # Application definition
 
@@ -98,7 +103,7 @@ STATICFILES_DIRS = (
 SITE_ID = 1
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     print('A local_settings.py file was not found, please create one using local_settings_example.py as an example!')
     pass

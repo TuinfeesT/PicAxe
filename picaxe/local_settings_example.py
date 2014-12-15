@@ -18,6 +18,6 @@ DATABASES = {
 }
 
 # Your uploaded files will be stored in <MEDIA_ROOT>/photologue/, so set it correctly!
-MEDIA_ROOT = './media/'
+MEDIA_ROOT = 'media'
 
 MEDIA_URL = '/media/'
