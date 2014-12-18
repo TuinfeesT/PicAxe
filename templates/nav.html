@@ -1,0 +1,28 @@
+<ul class="list-unstyled">
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <b>Galleries</b>
+        <ul>
+            <li>
+                <a href="{% url 'photologue:gallery-list' %}">All</a>
+            </li>
+            <li>
+                <a href="{% url 'photologue:pl-gallery-archive' %}">By date</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Photos</b>
+        <ul>
+            <li>
+                <a href="{% url 'photologue:photo-list' %}">All</a>
+            </li>
+            <li>
+                <a href="{% url 'photologue:pl-photo-archive' %}">By date</a>
+            </li>
+        </ul>
+    </li>
+
+</ul>

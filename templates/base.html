@@ -1,12 +1,28 @@
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>{% block title %}PicAxe{% endblock %}</title>
-    {% load bootstrap3 %}
+    {% bootstrap_css %}
 </head>
 <body>
-    {% block body %}
-    {% endblock %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-3">
+                <h1>Gallery</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                {% include 'nav.html' %}
+            </div>
+            <div class="col-md-9">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    {% bootstrap_javascript %}
 </body>
 </html>
