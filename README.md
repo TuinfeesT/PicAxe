@@ -20,6 +20,21 @@ Uploading photos
         - ...all at once using an archive format
     - ...with proper support for symlinks
 
+Galleries
+---------
+- Photo's should be placed inside galleries
+- One should be able to nest galleries inside eachother, creating a hierarchy
+
+Tagging
+-------
+- Be able to tag pictures (and galleries?)
+- While tagging items, one should get a hint of already existing tags or be able to create a new tag on the fly
+
+Viewing
+-------
+- Be able to view pictures and galleries given a date range
+- Be able to view pictures and galleries by selecting one or more tags
+
 User support
 ------------
 - Support user registration
