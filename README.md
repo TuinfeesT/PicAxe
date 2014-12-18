@@ -28,7 +28,8 @@ Galleries
 Tagging
 -------
 - Be able to tag pictures (and galleries?)
-- While tagging items, one should get a hint of already existing tags or be able to create a new tag on the fly
+- While tagging items, one should get a hint of already existing tags and be able to create a new tag on the fly
+- User should have a choice to choose tags from a list of existing tags, in a checkbox list model
 
 Viewing
 -------
