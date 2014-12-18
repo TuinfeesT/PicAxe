@@ -35,7 +35,7 @@ class PhotoExtended(models.Model):
     """
 
     # Link back to Photologue's Photo model
-    photo = models.OneToOneField(Photo, related_name='extended')
+    photo = models.OneToOneField(Photo, related_name='extended', primary_key=True)
 
     # Link to TaggableManager from django-taggit
     tags = TaggableManager(blank=True)
@@ -43,3 +43,8 @@ class PhotoExtended(models.Model):
     def __str__(self):
         return self.gallery.title
 
+
+@receiver(post_save, sender=Photo)
+def create_photo_extended(sender, instance, created, **kwargs):
+    if created:
+        PhotoExtended.objects.get_or_create(photo=instance)
