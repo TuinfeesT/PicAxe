@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from taggit.managers import TaggableManager
 from photologue.models import Gallery, Photo
 
@@ -9,7 +11,7 @@ class GalleryExtended(models.Model):
     """
 
     # Link back to Photologue's Gallery model.
-    gallery = models.OneToOneField(Gallery, related_name='extended')
+    gallery = models.OneToOneField(Gallery, related_name='extended', primary_key=True)
 
     # Link to TaggableManager from django-taggit
     tags = TaggableManager(blank=True)
@@ -19,6 +21,12 @@ class GalleryExtended(models.Model):
 
     def __str__(self):
         return self.gallery.title
+
+
+@receiver(post_save, sender=Gallery)
+def create_gallery_extended(sender, instance, created, **kwargs):
+    if created:
+        GalleryExtended.objects.get_or_create(gallery=instance)
 
 
 class PhotoExtended(models.Model):
@@ -34,3 +42,4 @@ class PhotoExtended(models.Model):
 
     def __str__(self):
         return self.gallery.title
+
